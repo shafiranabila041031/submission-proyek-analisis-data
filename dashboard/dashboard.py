@@ -1,15 +1,22 @@
 import pandas as pd
 import streamlit as st
+import os
 
 st.set_page_config(page_title="Bike Sharing Dashboard", page_icon="🚲", layout="wide")
 
 @st.cache_data
 def load_data():
-    day_df = pd.read_csv("final_cleaned_day.csv")
-    hour_df = pd.read_csv("final_cleaned_hour.csv")
+    BASE_DIR = os.path.dirname(__file__)
+    
+    day_path = os.path.join(BASE_DIR, "final_cleaned_day.csv")
+    hour_path = os.path.join(BASE_DIR, "final_cleaned_hour.csv")
+    
+    day_df = pd.read_csv(day_path)
+    hour_df = pd.read_csv(hour_path)
     
     day_df["dteday"] = pd.to_datetime(day_df["dteday"], format='%d-%m-%Y')
     hour_df["dteday"] = pd.to_datetime(hour_df["dteday"], format='%d-%m-%Y')
+    
     return day_df, hour_df
 
 day_df, hour_df = load_data()
@@ -76,7 +83,6 @@ with tab1:
             "yang menunjukkan sepeda banyak digunakan untuk aktivitas rutin seperti bekerja atau sekolah."
         )
 
-
 with tab2:
     st.subheader("Pola Penggunaan per Jam")
     hourly_trend = filtered_hour.groupby(["hr", "day_type"])["cnt"].mean().unstack()
@@ -93,7 +99,6 @@ with tab2:
             "Waktu di luar jam sibuk bisa dimanfaatkan untuk perawatan sepeda "
             "agar tidak mengganggu pengguna."
         )
-
 
 with tab3:
     st.subheader("Pengaruh Cuaca dan Musim")
