@@ -1,9 +1,11 @@
 # submission-proyek-analisis-data
 
-Nama: Shafira Nabila Noer Poerwanto
+# Bike Sharing Data Analysis Dashboard
 
-Bike Sharing Dashboard
-Dashboard ini dibuat untuk menganalisis pola penggunaan sepeda berdasarkan data historis. Fokus utama analisis mencakup tren harian, pola jam sibuk, serta pengaruh faktor lingkungan seperti cuaca dan musim terhadap jumlah penyewaan.
+Dashboard ini dibuat menggunakan **Streamlit** untuk memvisualisasikan hasil analisis data dari *Bike Sharing Dataset*. Dashboard ini menampilkan tren penyewaan harian, pola jam sibuk, serta pengaruh cuaca dan musim terhadap perilaku pengguna.
 
-Tujuan
-Membantu memahami perilaku pengguna dalam menyewa sepeda sehingga dapat digunakan sebagai dasar pengambilan keputusan, seperti pengelolaan operasional dan strategi bisnis.
+## 1. Setup Environment
+Sangat disarankan untuk menggunakan *virtual environment* agar *library* proyek ini tidak bentrok dengan proyek Python Anda yang lain. Anda bisa memilih salah satu cara di bawah ini (menggunakan Anaconda atau Python Venv):
+
+conda create --name bike-sharing-ds python=3.9
+conda activate bike-sharing-ds
