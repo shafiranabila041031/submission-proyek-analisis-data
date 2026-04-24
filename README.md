@@ -1,6 +1,6 @@
 # submission-proyek-analisis-data
 
-# 🚲 Bike Sharing Data Analysis Dashboard
+# Bike Sharing Data Analysis Dashboard
 
 ## Deskripsi Proyek
 Proyek ini merupakan tugas akhir (submission) untuk kelas **Belajar Analisis Data dengan Python** di Dicoding. Proyek ini bertujuan untuk menganalisis dataset *Bike Sharing* guna mendapatkan *insight* bisnis terkait pola pertumbuhan penyewaan dan perilaku komuter. Hasil analisis ini divisualisasikan melalui *dashboard* interaktif menggunakan Streamlit.
@@ -19,7 +19,7 @@ Menggunakan fungsi `pd.qcut()`, performa penyewaan harian dikelompokkan menjadi 
 
 Hasil analisis lanjutan menunjukkan bahwa kondisi *High Demand* memiliki korelasi yang sangat kuat dengan cuaca yang cerah dan suhu lingkungan yang hangat, sedangkan cuaca buruk terbukti secara instan menekan angka penyewaan ke level *Low Demand*.
 
-## ⚙️ Cara Menjalankan Dashboard (Setup & Run)
+## Cara Menjalankan Dashboard (Setup & Run)
 
 ### 1. Persiapan Environment
 Sangat disarankan untuk menggunakan *virtual environment* agar *library* proyek ini terisolasi dengan baik. Buka terminal/command prompt Anda:
